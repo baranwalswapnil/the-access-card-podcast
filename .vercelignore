@@ -1,0 +1,9 @@
+# Ignore uncompressed raw files
+/guest_intro_preview.mp4
+/AccessCards_Intro_Preview_v6.mp4
+/BTS of Shoot/
+/Go through His Profile/
+/*.pdf
+/*.docx
+/*.bak*
+/*.tmp
