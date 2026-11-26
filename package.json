@@ -1,0 +1,9 @@
+{
+  "name": "the-access-card-podcast",
+  "version": "1.0.0",
+  "description": "The Access Card Podcast Showcase - Gryphon Academy",
+  "main": "index.html",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

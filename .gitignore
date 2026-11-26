@@ -1,0 +1,24 @@
+# OS & Temp
+.DS_Store
+Thumbs.db
+*.bak*
+*.tmp
+
+# Raw uncompressed root files (optimized versions live in assets/)
+/guest_intro_preview.mp4
+/AccessCards_Intro_Preview_v6.mp4
+/BTS of Shoot/
+/Go through His Profile/
+/Purchase Shortlist (2) (1).pdf
+/Purchase_Order_GA_26-27_DM_02.docx
+
+# Dependencies & Vercel
+node_modules/
+.vercel/
+
+Created Youtue Channel.png
+First_Podcast.png
+GA - Logo TM (1).png
+GA - Logo TM white.png
+Invitation_Pass.jpg
+bird_logo_anim.mp4

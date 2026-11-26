@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Access Card | Gryphon Academy Podcast Showcase</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39&display=swap" rel="stylesheet">
+
+  <!-- Feather / Lucide Icons via unpkg -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Three.js for 3D Interactive WebGL Particles & Camera Parallax -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <link rel="stylesheet" href="style.css?v=1795695690000">
+</head>
+
+<body>
+
+  <!-- 3D Canvas Background -->
+  <canvas id="webgl-canvas"></canvas>
+  <div class="ambient-glow-mesh"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- Click Ripple Effect Container -->
+  <div id="click-ripple-container"></div>
+
+  <!-- Navigation Bar -->
+  <header class="top-nav">
+    <a href="#act-genesis" class="nav-brand">
+      <img src="assets/images/ga_logo_dark.png" alt="Gryphon Academy" class="brand-logo-img">
+      <div class="brand-badge">
+        <span class="brand-title">The Access Card</span>
+        <span class="brand-subtitle">Podcast Genesis & Launch</span>
+      </div>
+    </a>
+
+    <div class="nav-center">
+      <div class="timeline-pill">
+        <span class="pulse-dot"></span>
+        <span id="nav-chapter-indicator">Act 1: The Spark</span>
+      </div>
+    </div>
+
+    <div class="nav-controls">
+      <a href="https://youtu.be/h4h5KASzdjQ?si=XJJkmhFL2Zf-TL5V" target="_blank" rel="noopener" class="btn-cta-watch">
+        <i data-lucide="play-circle"></i>
+        <span>Watch Episode 1</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Showcase Wrapper -->
+  <main class="main-wrapper">
+
+    <!-- ================= ACT 1: GENESIS & MOTIVATION ================= -->
+    <section class="chapter-section" id="act-genesis">
+      <div class="hero-stage">
+
+        <div class="hero-text-col">
+          <div class="section-header-tag">
+            <i data-lucide="sparkles" style="width:14px;height:14px;"></i>
+            Act 01 • The Genesis
+          </div>
+
+          <h1 class="section-title">The Spark That Started The Journey</h1>
+
+          <div class="hero-quote-card card-3d">
+            <span class="quote-mark">“</span>
+            <p class="hero-quote-text">
+              The distance between a campus and a corporate office is often measured in questions. What do recruiters
+              look for? What happens after the offer letter? Which skills carry a career forward?
+              <br><br>
+              <strong>We didn't just want to answer them. We built the Access Card to become that bridge.</strong>
+            </p>
+            <div class="hero-quote-author">
+              <i data-lucide="shield-check" style="width:16px;height:16px;"></i>
+              Gryphon Academy • Leadership Vision 2026
+            </div>
+          </div>
+
+          <div class="hero-stats-row">
+            <div class="stat-item card-3d">
+              <div class="stat-num">50+</div>
+              <div class="stat-desc">Title Concepts Tested</div>
+            </div>
+            <div class="stat-item card-3d">
+              <div class="stat-num">24 Yrs</div>
+              <div class="stat-desc">Guest Talent Expertise</div>
+            </div>
+            <div class="stat-item card-3d">
+              <div class="stat-num">60 Min</div>
+              <div class="stat-desc">Masterclass Episode</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3D Holographic Portal with Bird Video -->
+        <div class="hero-portal-wrap">
+          <div class="portal-ring-outer"></div>
+          <div class="portal-ring-inner"></div>
+
+          <div class="portal-video-frame">
+            <video class="portal-bird-video" autoplay loop muted playsinline>
+              <source src="assets/videos/bird_logo_anim.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+
+          <div class="portal-hologram-hud" style="background:#7F011F !important;border:2px solid #F5EBD0 !important;box-shadow:0 0 20px rgba(127,1,31,0.5);padding:0.5rem 1.4rem;border-radius:999px;display:flex;align-items:center;gap:0.75rem;position:absolute;bottom:-30px;z-index:10;">
+            <i data-lucide="radio" style="width:14px;height:14px;color:#F5EBD0 !important;"></i>
+            <span style="color:#F5EBD0 !important;font-weight:800;letter-spacing:0.05em;font-family:var(--font-mono);font-size:0.8rem;">GRYPHON 3D EMBLEM • LIVE BROADCAST</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= ACT 2: THE NAMING STORM ================= -->
+    <section class="chapter-section" id="act-naming">
+      <div class="section-header-tag">
+        <i data-lucide="check-check" style="width:14px;height:14px;"></i>
+        Act 02 • Finding The One Name
+      </div>
+      <h2 class="section-title">Figuring Out 1 Name Among 50+ Brainstormed Names</h2>
+      <p class="section-subtitle">
+        We brainstormed and sifted through 50+ names for our podcast channel — testing every angle, slang, and idea. Out of all 50+ options, we finalized the ONE name that truly captures our mission: <strong>The Gryphon Academy Podcast: The Access Card</strong>. Explore what was considered below to see how the final name was chosen.
+      </p>
+
+      <!-- Category Filter Pills for 50+ Names -->
+      <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.2rem;" id="naming-category-filters">
+        <button class="ctrl-btn active" data-cat="all" style="font-size:0.75rem;padding:0.35rem 0.8rem;">All Nominees
+          (52)</button>
+        <button class="ctrl-btn" data-cat="desi" style="font-size:0.75rem;padding:0.35rem 0.8rem;">Desi & Slang</button>
+        <button class="ctrl-btn" data-cat="corporate" style="font-size:0.75rem;padding:0.35rem 0.8rem;">Corporate &
+          Serious</button>
+        <button class="ctrl-btn" data-cat="campus" style="font-size:0.75rem;padding:0.35rem 0.8rem;">Campus &
+          Youth</button>
+        <button class="ctrl-btn" data-cat="quirky" style="font-size:0.75rem;padding:0.35rem 0.8rem;">Edgy &
+          Quirky</button>
+      </div>
+
+      <div class="naming-grid-wrap">
+
+        <!-- Cloud of 50+ brainstormed names -->
+        <div class="candidate-chips-cloud" id="candidate-chips-container">
+          <!-- Populated dynamically via app.js with rich interaction -->
+        </div>
+
+        <!-- Grand Winner 3D Access Card -->
+        <div class="winner-card-showcase">
+          <div class="winner-access-card card-3d" id="winner-access-card" style="position:relative;width:100%;aspect-ratio:1.58/1;background:linear-gradient(135deg, #42000E 0%, #7F011F 50%, #42000E 100%) !important;border-radius:24px;border:2px solid #F5EBD0 !important;box-shadow:0 0 45px rgba(127,1,31,0.5), 0 25px 50px rgba(0,0,0,0.5);padding:2.5rem;display:flex;flex-direction:column;justify-content:space-between;transform-style:preserve-3d;overflow:hidden;">
+
+            <div class="card-top-row" style="display:flex;justify-content:space-between;align-items:center;z-index:2;">
+              <div class="card-chip-icon"></div>
+              <img src="assets/images/ga_logo_white.png" alt="GA Logo" class="card-brand-logo" style="height:36px;filter:brightness(2);">
+            </div>
+
+            <div class="card-center-body" style="z-index:2;margin:1rem 0;">
+              <span class="card-pass-label" style="color:#F5EBD0 !important;font-family:var(--font-mono);font-size:0.82rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;opacity:0.95;">★ FINAL CHOSEN NAME AMONG 50+ OPTIONS</span>
+              <h3 class="card-grand-title" style="color:#FFFFFF !important;font-size:clamp(1.6rem, 2.8vw, 2.2rem);font-weight:900;line-height:1.15;margin-top:0.35rem;text-shadow:0 2px 14px rgba(0,0,0,0.8);">The Gryphon Academy Podcast</h3>
+              <div class="card-tagline" style="color:#F5EBD0 !important;font-size:1.25rem;font-weight:800;margin-top:0.35rem;letter-spacing:0.08em;text-shadow:0 2px 10px rgba(0,0,0,0.6);">THE ACCESS CARD</div>
+            </div>
+
+            <div class="card-bottom-row" style="display:flex;justify-content:space-between;align-items:flex-end;z-index:2;">
+              <div class="card-holder-info" style="display:flex;flex-direction:column;">
+                <span class="info-label" style="color:#F5EBD0 !important;font-size:0.75rem;font-family:var(--font-mono);letter-spacing:0.12em;font-weight:700;opacity:0.9;">MISSION</span>
+                <span class="info-val" style="color:#FFFFFF !important;font-size:1.05rem;font-weight:800;text-shadow:0 2px 8px rgba(0,0,0,0.6);">Bridging Campus to Corporate</span>
+              </div>
+              <div class="card-barcode" style="color:#F5EBD0 !important;font-family:'Libre Barcode 39', monospace, sans-serif;font-size:2.5rem;letter-spacing:4px;opacity:0.95;line-height:1;">||| | |||| | |||||| | |||</div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= ACT 3: BRAND & CREATIVE REVIEW ================= -->
+    <section class="chapter-section" id="act-brand-lab">
+      <div class="section-header-tag">
+        <i data-lucide="palette" style="width:14px;height:14px;"></i>
+        Act 03 • Creative War Room
+      </div>
+      <h2 class="section-title">Logo & Banner Architecture</h2>
+      <p class="section-subtitle">
+        We developed and reviewed multiple visual branding drafts — evaluating typography, emblem contrast, and YouTube
+        banner proportions.
+      </p>
+
+      <div class="brand-lab-card card-3d">
+        <div class="vercel-interactive-badge">
+          <div style="display:flex;align-items:center;gap:1rem;">
+            <div style="font-size:2.2rem;">🎨</div>
+            <div>
+              <h3 style="font-size:1.4rem;font-weight:800;color:#FFFFFF !important;">Podcast Creative Review App</h3>
+              <p style="color:#F5EBD0 !important;font-size:0.9rem;font-weight:700;">Official Vercel Showcase for Brand & Banner Drafts</p>
+            </div>
+          </div>
+
+          <p style="color:#FAF5E8 !important;line-height:1.7;font-size:0.95rem;font-weight:500;">
+            Our creative team drafted 11 distinct visual layouts spanning circular emblems, dark/light variations, and high-impact horizontal banner designs. Explore all drafted assets live on our deployed creative dashboard:
+          </p>
+
+          <a href="https://public-zeta-ashy.vercel.app/" target="_blank" rel="noopener" class="vercel-link-btn">
+            <i data-lucide="external-link" style="width:16px;height:16px;color:#F5EBD0;"></i>
+            <span>Open Brand Review App (public-zeta-ashy.vercel.app)</span>
+          </a>
+        </div>
+
+        <div class="brand-showcase-features">
+          <div class="brand-feature-item">
+            <div class="feature-icon-box">
+              <i data-lucide="check" style="width:18px;height:18px;"></i>
+            </div>
+            <div>
+              <h4 style="font-weight:800;color:#7F011F !important;font-size:1.1rem;">The Gryphon Mascot & Bridge</h4>
+              <p style="font-size:0.88rem;color:#3B000D !important;font-weight:600;line-height:1.6;margin-top:0.25rem;">Blends the winged Gryphon symbol with the suspension bridge motif, representing the transition into corporate careers.</p>
+            </div>
+          </div>
+
+          <div class="brand-feature-item">
+            <div class="feature-icon-box">
+              <i data-lucide="smartphone" style="width:18px;height:18px;"></i>
+            </div>
+            <div>
+              <h4 style="font-weight:800;color:#7F011F !important;font-size:1.1rem;">Mobile & TV Responsive Scaling</h4>
+              <p style="font-size:0.88rem;color:#3B000D !important;font-weight:600;line-height:1.6;margin-top:0.25rem;">Tested across YouTube mobile headers, desktop displays, and smart TV dimensions for zero cropping.</p>
+            </div>
+          </div>
+
+          <div class="brand-feature-item">
+            <div class="feature-icon-box">
+              <i data-lucide="eye" style="width:18px;height:18px;"></i>
+            </div>
+            <div>
+              <h4 style="font-weight:800;color:#7F011F !important;font-size:1.1rem;">High-Contrast Clickability</h4>
+              <p style="font-size:0.88rem;color:#3B000D !important;font-weight:600;line-height:1.6;margin-top:0.25rem;">Deep Crimson `#7F011F` and Royal Magenta `#890149` foundation on Warm Cream `#F5EBD0` for maximum visual clarity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ACT 4: SOCIAL MEDIA DISTRIBUTION STRATEGY ================= -->
+    <section class="chapter-section" id="act-social-strategy">
+      <div class="section-header-tag">
+        <i data-lucide="share-2" style="width:14px;height:14px;"></i>
+        Act 04 • Platform Growth & Release Cadence
+      </div>
+      <h2 class="section-title">The Social Media Distribution Strategy</h2>
+      <p class="section-subtitle">
+        Our proven weekly release cadence designed to build hype, dominate Sunday watch time, drive viral short-form discovery, and leverage guest network co-branding.
+      </p>
+
+      <!-- 4-Phase Weekly Cadence Grid -->
+      <div class="cadence-timeline-grid">
+
+        <!-- Phase 1: Tuesday Trailer -->
+        <div class="cadence-card card-3d">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div class="cadence-day-badge tuesday">
+              <i data-lucide="calendar" style="width:12px;height:12px;"></i>
+              Tuesday Drop
+            </div>
+            <div class="cadence-step-icon" style="color:var(--primary-cyan);border-color:var(--primary-cyan);">
+              <i data-lucide="sparkles"></i>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="cadence-title" style="color:#7F011F;font-weight:800;">1. Publish Podcast Trailer</h4>
+            <p class="cadence-desc">
+              Launch the 45–60s cinematic teaser showcasing SN Rao’s most provocative soundbites to spark curiosity 5 days early.
+            </p>
+          </div>
+
+          <ul class="cadence-action-list">
+            <li class="cadence-action-item">
+              <i data-lucide="check" style="width:14px;height:14px;"></i>
+              <span style="color:#3B000D;font-weight:700;">High-energy kinetic teaser</span>
+            </li>
+            <li class="cadence-action-item">
+              <i data-lucide="check" style="width:14px;height:14px;"></i>
+              <span style="color:#3B000D;font-weight:700;">Sunday premiere date announcement</span>
+            </li>
+            <li class="cadence-action-item">
+              <i data-lucide="check" style="width:14px;height:14px;"></i>
+              <span style="color:#3B000D;font-weight:700;">Shorts, Reels & LinkedIn broadcast</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Phase 2: Sunday Full Episode -->
+        <div class="cadence-card card-3d">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div class="cadence-day-badge sunday">
+              <i data-lucide="play-circle" style="width:12px;height:12px;"></i>
+              Sunday Premiere
+            </div>
+            <div class="cadence-step-icon" style="color:#ff5757;border-color:#ff5757;">
+              <i data-lucide="youtube"></i>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="cadence-title" style="color:#7F011F;font-weight:800;">2. Publish Full Podcast</h4>
+            <p class="cadence-desc">
+              Release the full 60-minute masterclass on YouTube during peak Sunday prime-time hours when long-form watch time peaks.
+            </p>
+          </div>
+
+          <ul class="cadence-action-list">
+            <li class="cadence-action-item">
+              <i data-lucide="check" style="width:14px;height:14px;"></i>
+              <span style="color:#3B000D;font-weight:700;">Full 60-min 4K broadcast on YouTube</span>
+            </li>
+            <li class="cadence-action-item">
+              <i data-lucide="check" style="width:14px;height:14px;"></i>
+              <span style="color:#3B000D;font-weight:700;">Pinned comment community conversation</span>
+            </li>
+            <li class="cadence-action-item">
+              <i data-lucide="check" style="width:14px;height:14px;"></i>
+              <span style="color:#3B000D;font-weight:700;">Search-indexed timestamps & chapters</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Phase 3: Post-Launch Short Clips -->
+        <div class="cadence-card card-3d">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div class="cadence-day-badge midweek">
+              <i data-lucide="scissors" style="width:12px;height:12px;"></i>
+              Following Days
+            </div>
+            <div class="cadence-step-icon" style="color:var(--neon-purple);border-color:var(--neon-purple);">
+              <i data-lucide="smartphone"></i>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="cadence-title" style="color:#7F011F;font-weight:800;">3. Publish 2–3 Short Clips</h4>
+            <p class="cadence-desc">
+              Extract high-impact vertical micro-clips tackling specific fresher questions, funnelling audiences back into the full episode.
+            </p>
+          </div>
+
+          <ul class="cadence-action-list">
+            <li class="cadence-action-item">
+              <i data-lucide="check" style="width:14px;height:14px;"></i>
+              <span style="color:#3B000D;font-weight:700;">Clip 1: Recruiter's First 2 Minutes</span>
+            </li>
+            <li class="cadence-action-item">
+              <i data-lucide="check" style="width:14px;height:14px;"></i>
+              <span>Clip 2: "Is Corporate Life Really a Trap?"</span>
+            </li>
+            <li class="cadence-action-item">
+              <i data-lucide="check" style="width:14px;height:14px;"></i>
+              <span style="color:#3B000D;font-weight:700;">Clip 3: AI Jobs Impact for Freshers</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Phase 4: Final Guest Co-Promotion -->
+        <div class="cadence-card card-3d">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div class="cadence-day-badge guest">
+              <i data-lucide="award" style="width:12px;height:12px;"></i>
+              Final Co-Promotion
+            </div>
+            <div class="cadence-step-icon" style="color:var(--accent-gold);border-color:var(--accent-gold);">
+              <i data-lucide="linkedin"></i>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="cadence-title" style="color:#7F011F;font-weight:800;">4. Guest Social Promo Video</h4>
+            <p class="cadence-desc">
+              Create a custom promotional video and quote asset specifically optimized for our guest to share across their personal channels.
+            </p>
+          </div>
+
+          <ul class="cadence-action-list">
+            <li class="cadence-action-item">
+              <i data-lucide="check" style="width:14px;height:14px;"></i>
+              <span style="color:#3B000D;font-weight:700;">Guest personal LinkedIn package</span>
+            </li>
+            <li class="cadence-action-item">
+              <i data-lucide="check" style="width:14px;height:14px;"></i>
+              <span style="color:#3B000D;font-weight:700;">High-resolution branded quote asset</span>
+            </li>
+            <li class="cadence-action-item">
+              <i data-lucide="check" style="width:14px;height:14px;"></i>
+              <span style="color:#3B000D;font-weight:700;">Reach 20,000+ HR & executive network</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Strategy Overview Banner & Script Vault Toggle -->
+      <div class="strategy-overview-banner card-3d" style="background:#FAF5E8 !important;border:2px solid #7F011F !important;box-shadow:0 10px 30px rgba(127,1,31,0.08);border-radius:18px;padding:2rem 2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;">
+        <div>
+          <div style="display:inline-flex;align-items:center;gap:0.4rem;font-family:var(--font-mono);font-size:0.75rem;color:#890149;font-weight:800;margin-bottom:0.4rem;">
+            <i data-lucide="trending-up" style="width:14px;height:14px;color:#890149;"></i>
+            THE CONTENT FLYWHEEL
+          </div>
+          <h3 style="color:#7F011F !important;font-size:1.4rem;font-weight:800;line-height:1.3;">Why This Release Sequence Works</h3>
+          <p style="color:#3B000D !important;font-size:0.95rem;font-weight:600;line-height:1.75;margin-top:0.5rem;">By separating the trailer (Tuesday), main drop (Sunday), viral cutdowns (following days), and guest co-branding, the algorithm receives multiple sustained engagement waves throughout the week instead of a single one-day spike.
+          </p>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:0.8rem;background:#EDE0BF !important;padding:1.4rem;border-radius:14px;border:1.5px solid rgba(127,1,31,0.25);">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:0.95rem;font-weight:800;color:#7F011F !important;">Production Scripts Reference</span>
+            <button class="ctrl-btn" id="toggle-scripts-vault-btn" style="background:#7F011F;color:#F5EBD0;font-size:0.78rem;font-weight:700;padding:0.4rem 0.9rem;border:1px solid #7F011F;">
+              <i data-lucide="file-text" style="width:14px;height:14px;"></i>
+              <span id="script-toggle-label">Inspect Script Drafts</span>
+            </button>
+          </div>
+          <p style="font-size:0.82rem;color:#6B0E21 !important;font-weight:600;line-height:1.5;">
+            View underlying Concept Note, 4 Strategic Discussion Pillars, Short Hook, and Master Multi-Cam Broadcast Drafts.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ================= ACT 5: STUDIO GEAR ARSENAL ================= -->
+    <section class="chapter-section" id="act-studio-gear">
+      <div class="section-header-tag">
+        <i data-lucide="tool" style="width:14px;height:14px;"></i>
+        Act 05 • Hardware & Setup
+      </div>
+      <h2 class="section-title">The Studio Production Arsenal</h2>
+      <p class="section-subtitle">
+        Executed under official Purchase Order (PO No: GA_26-27_DM_02) with verified extras (₹8,827 total). Click each gear component to inspect
+        its role in the live recording.
+      </p>
+
+      <div class="gear-stage-grid">
+
+        <div class="po-manifest-card card-3d" style="background:#FAF5E8 !important;border:2px solid #7F011F !important;box-shadow:0 10px 30px rgba(127,1,31,0.08);border-radius:16px;padding:2rem;font-family:var(--font-mono);">
+          <div class="po-header-row">
+            <div>
+              <h4 style="color:#7F011F;font-weight:800;">PURCHASE ORDER: GA_26-27_DM_02</h4>
+              <p style="font-size:0.8rem;color:#6B0E21;font-weight:600;">Gryphon Academy Pvt Ltd • Baner, Pune</p>
+            </div>
+            <div style="text-align:right;">
+              <span style="color:#890149;font-weight:800;">APPROVED & DELIVERED</span>
+              <p style="font-size:0.8rem;color:#6B0E21;font-weight:600;">Vendor: Amazon Business</p>
+            </div>
+          </div>
+
+          <table class="gear-table">
+            <thead>
+              <tr>
+                <th style="color:#7F011F;font-weight:800;">Item Description</th>
+                <th style="text-align:center;color:#7F011F;font-weight:800;">Qty</th>
+                <th style="text-align:right;color:#7F011F;font-weight:800;">Price (₹)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mini-USB Studio Mic Replacement Cable</td>
+                <td style="text-align:center;">1</td>
+                <td style="text-align:right;">₹635</td>
+              </tr>
+              <tr>
+                <td>Socket Plastic Holder & Mount</td>
+                <td style="text-align:center;">1</td>
+                <td style="text-align:right;">₹179</td>
+              </tr>
+              <tr>
+                <td>Studio Diffuser Softbox for Main Lighting</td>
+                <td style="text-align:center;">1</td>
+                <td style="text-align:right;">₹1,348</td>
+              </tr>
+              <tr>
+                <td>Light Stand Swivel Mount & Umbrella Holder</td>
+                <td style="text-align:center;">1</td>
+                <td style="text-align:right;">₹657</td>
+              </tr>
+              <tr>
+                <td>Dual LED Strip Lights for Background Glow</td>
+                <td style="text-align:center;">2</td>
+                <td style="text-align:right;">₹1,138</td>
+              </tr>
+              <tr>
+                <td>Glass Props & Set Styling Elements</td>
+                <td style="text-align:center;">1</td>
+                <td style="text-align:right;">₹2,000</td>
+              </tr>
+              <tr>
+                <td>Digitek DTR-480LW Heavy Duty Tripods</td>
+                <td style="text-align:center;">2</td>
+                <td style="text-align:right;">₹2,398</td>
+              </tr>
+              <tr>
+                <td>Extras (Production Miscellaneous & Logistics)</td>
+                <td style="text-align:center;">1</td>
+                <td style="text-align:right;">₹472</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="po-total-row">
+            <span>TOTAL INVESTMENT (INC. GST):</span>
+            <span>₹8,827</span>
+          </div>
+        </div>
+
+        <!-- Interactive Blueprint -->
+        <div class="studio-blueprint card-3d">
+          <div class="blueprint-grid-bg"></div>
+
+          <div style="z-index:2;">
+            <h4 style="font-weight:800;color:#7F011F;">3D Studio Layout Map</h4>
+            <p style="font-size:0.8rem;color:#6B0E21;font-weight:600;">Hover any pin to reveal lighting & audio placement
+            </p>
+          </div>
+
+          <!-- Interactive Pins -->
+          <div class="blueprint-node" style="top:30%; left:25%;">
+            <div class="node-pin">1</div>
+            <div class="node-tooltip">Key Light: Softbox Diffuser (45° Angle)</div>
+          </div>
+
+          <div class="blueprint-node" style="top:55%; left:30%;">
+            <div class="node-pin">2</div>
+            <div class="node-tooltip">Host Chair (Peach Wingback + Lapel Mic)</div>
+          </div>
+
+          <div class="blueprint-node" style="top:50%; left:50%;">
+            <div class="node-pin">3</div>
+            <div class="node-tooltip">Center Table: Blue Yeti Mic + Gryphon Sculpture</div>
+          </div>
+
+          <div class="blueprint-node" style="top:55%; left:70%;">
+            <div class="node-pin">4</div>
+            <div class="node-tooltip">Guest Chair (SN Rao Interview Spot)</div>
+          </div>
+
+          <div class="blueprint-node" style="top:25%; left:50%;">
+            <div class="node-pin">5</div>
+            <div class="node-tooltip">Wall Backdrop: Acrylic GA Emblem + LED Glow</div>
+          </div>
+
+          <div class="blueprint-node" style="top:85%; left:35%;">
+            <div class="node-pin">6</div>
+            <div class="node-tooltip">Cam-1 (Wide Studio Shot on Digitek Tripod)</div>
+          </div>
+
+          <div class="blueprint-node" style="top:85%; left:65%;">
+            <div class="node-pin">7</div>
+            <div class="node-tooltip">Cam-2 (Guest Tight Reaction Shot on Tripod)</div>
+          </div>
+
+          <div style="z-index:2;display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-family:var(--font-mono);font-size:0.75rem;color:#7F011F;font-weight:800;">CALIBRATED FOR ZERO ECHO</span>
+            <span style="font-family:var(--font-mono);font-size:0.75rem;color:#890149;font-weight:800;">DUAL 4K SENSOR ALIGNED</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= ACT 6: THE SHOOT (ROLLING!) ================= -->
+    <section class="chapter-section" id="act-shoot-day">
+      <div class="section-header-tag">
+        <i data-lucide="video" style="width:14px;height:14px;"></i>
+        Act 06 • Studio Shoot & BTS Vault
+      </div>
+      <h2 class="section-title">Cameras Rolling: The Shoot & Unlocked BTS</h2>
+      <p class="section-subtitle">
+        Step right onto the studio floor and watch how our very first podcast was recorded in crisp 4K 60fps — complete with pre-shoot walkthroughs, camera rig framing, and authentic candid moments.
+      </p>
+
+      <!-- Primary Feature: 4 Side-by-Side Looping BTS Video Reels Grid -->
+      <div class="bts-quad-reels-container" style="margin-top:2.5rem;">
+        <div class="bts-quad-grid">
+
+          <!-- Reel 1: Live Studio Vibe Reel -->
+          <div class="bts-quad-card card-3d">
+            <div class="bts-reel-video-wrapper">
+              <video class="bts-loop-video" autoplay loop muted playsinline poster="assets/bts/bts_wide_camera.jpg">
+                <source src="assets/bts/bts_reel.mp4" type="video/mp4">
+              </video>
+              <div class="bts-reel-badge">
+                <span class="live-rec-dot"></span>
+                <span>REEL 01 • VIBE</span>
+              </div>
+            </div>
+            <div class="bts-quad-meta">
+              <div class="bts-quad-tag" style="color:#890149 !important;font-weight:800;">STUDIO ATMOSPHERE</div>
+              <h4 class="bts-quad-title" style="color:#7F011F !important;font-weight:800;">Live Studio Vibe</h4>
+              <p class="bts-quad-desc" style="color:#3B000D !important;font-weight:600;">Electric studio floor dynamics and host-guest interaction.</p>
+            </div>
+          </div>
+
+          <!-- Reel 2: Pre-Shoot Setup Walkthrough -->
+          <div class="bts-quad-card card-3d">
+            <div class="bts-reel-video-wrapper">
+              <video class="bts-loop-video" autoplay loop muted playsinline poster="assets/bts/bts_discussion.jpg">
+                <source src="assets/bts/bts_clip_1.mov" type="video/quicktime">
+                <source src="assets/bts/bts_clip_1.mov" type="video/mp4">
+              </video>
+              <div class="bts-reel-badge">
+                <span class="live-rec-dot"></span>
+                <span>REEL 02 • SETUP</span>
+              </div>
+            </div>
+            <div class="bts-quad-meta">
+              <div class="bts-quad-tag" style="color:#890149 !important;font-weight:800;">PRE-SHOOT PREP</div>
+              <h4 class="bts-quad-title" style="color:#7F011F !important;font-weight:800;">Pre-Shoot Walkthrough</h4>
+              <p class="bts-quad-desc" style="color:#3B000D !important;font-weight:600;">Mic calibrations, light angle diffusers, and table staging.</p>
+            </div>
+          </div>
+
+          <!-- Reel 3: Camera Rig & Angles Scan -->
+          <div class="bts-quad-card card-3d">
+            <div class="bts-reel-video-wrapper">
+              <video class="bts-loop-video" autoplay loop muted playsinline poster="assets/bts/bts_rig_angle.jpg">
+                <source src="assets/bts/bts_clip_2.mov" type="video/quicktime">
+                <source src="assets/bts/bts_clip_2.mov" type="video/mp4">
+              </video>
+              <div class="bts-reel-badge">
+                <span class="live-rec-dot"></span>
+                <span>REEL 03 • RIGS</span>
+              </div>
+            </div>
+            <div class="bts-quad-meta">
+              <div class="bts-quad-tag" style="color:#890149 !important;font-weight:800;">4K MULTI-CAM</div>
+              <h4 class="bts-quad-title" style="color:#7F011F !important;font-weight:800;">Camera Rig & Angles</h4>
+              <p class="bts-quad-desc" style="color:#3B000D !important;font-weight:600;">Dual tripod positioning for wide host and tight guest framing.</p>
+            </div>
+          </div>
+
+          <!-- Reel 4: Candid Exchange & Bloopers -->
+          <div class="bts-quad-card card-3d">
+            <div class="bts-reel-video-wrapper">
+              <video class="bts-loop-video" autoplay loop muted playsinline poster="assets/bts/bts_laughing.jpg">
+                <source src="assets/bts/bts_clip_3.mov" type="video/quicktime">
+                <source src="assets/bts/bts_clip_3.mov" type="video/mp4">
+              </video>
+              <div class="bts-reel-badge">
+                <span class="live-rec-dot"></span>
+                <span>REEL 04 • CANDID</span>
+              </div>
+            </div>
+            <div class="bts-quad-meta">
+              <div class="bts-quad-tag" style="color:#890149 !important;font-weight:800;">UNFILTERED ENERGY</div>
+              <h4 class="bts-quad-title" style="color:#7F011F !important;font-weight:800;">Candid & Bloopers</h4>
+              <p class="bts-quad-desc" style="color:#3B000D !important;font-weight:600;">Unscripted laughter, icebreakers, and behind-the-mic banter.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ACT 7: GUEST RESEARCH & INTEL ================= -->
+    <section class="chapter-section" id="act-guest-intel">
+      <div class="section-header-tag">
+        <i data-lucide="search" style="width:14px;height:14px;"></i>
+        Act 07 • Intelligence Dossier
+      </div>
+      <h2 class="section-title">Deconstructing The First Guest: SN Rao</h2>
+      <p class="section-subtitle">
+        We combed LinkedIn, YouTube, TASCON conferences, and corporate archives to analyze his trajectory before
+        drafting our tailored invitation.
+      </p>
+
+      <div class="guest-stage">
+
+        <!-- Profile Card -->
+        <div class="guest-profile-card card-3d">
+          <div class="guest-hero-header">
+            <div class="guest-avatar-ring">
+              <!-- Clip frame from First_Podcast.png -->
+              <img src="assets/images/first_podcast_shoot.png" alt="Suvarnanidhi Rao" class="guest-avatar-img">
+            </div>
+            <div>
+              <h3 class="guest-meta-name" style="color:#7F011F;font-weight:800;">Suvarnanidhi Rao</h3>
+              <p class="guest-meta-role" style="color:#890149;font-weight:700;">Associate Director, Talent Acquisition</p>
+              <p class="guest-meta-company" style="color:#6B0E21;font-weight:600;">Dentsu Global Services • Ex-Philips • Ex-BT • Ex-TCS • Ex-Wipro</p>
+            </div>
+          </div>
+
+          <div class="badges-flow">
+            <div class="intel-badge gold">
+              <i data-lucide="award" style="width:14px;height:14px;"></i>
+              Top 100 HR Leaders
+            </div>
+            <div class="intel-badge cyan">
+              <i data-lucide="mic" style="width:14px;height:14px;"></i>
+              TEDx Speaker
+            </div>
+            <div class="intel-badge" style="color:#7F011F;border-color:#7F011F;background:rgba(127,1,31,0.08);font-weight:800;"><i data-lucide="book-open" style="width:14px;height:14px;"></i>Bachelor of Theology</div>
+            <div class="intel-badge" style="color:#7F011F;border-color:#7F011F;background:rgba(127,1,31,0.08);font-weight:800;"><i data-lucide="users" style="width:14px;height:14px;"></i>20+ Yrs Campus Hiring</div>
+          </div>
+
+          <div class="career-pathway-timeline">
+            <div class="path-step">
+              <div class="path-company">Dentsu Global Services (2026 – Present)</div>
+              <div class="path-role">Associate Director - Leading 5,600+ GCC Capability Center Hiring</div>
+            </div>
+            <div class="path-step">
+              <div class="path-company">Philips India</div>
+              <div class="path-role">Lead Early Careers Talent India</div>
+            </div>
+            <div class="path-step">
+              <div class="path-company">British Telecom (BT)</div>
+              <div class="path-role">Campus & Early Talent Sourcing</div>
+            </div>
+            <div class="path-step">
+              <div class="path-company">Wipro & Tata Consultancy Services (TCS)</div>
+              <div class="path-role">Location Campus Manager • Evaluated 10,000+ Freshers</div>
+            </div>
+          </div>
+
+          <div class="invite-dispatch-box">
+            <div class="dispatch-status">
+              <i data-lucide="check-circle-2" style="width:20px;height:20px;"></i>
+              VIP Invitation Confirmed & Scheduled
+            </div>
+            <button class="ctrl-btn" id="view-invite-btn">
+              <i data-lucide="eye"></i>
+              View Invitation Pass
+            </button>
+          </div>
+
+          <!-- Official Dispatched Invitation Pass Card -->
+          <div class="invite-pass-preview-card card-3d" id="invite-pass-card" style="margin-top:1.2rem;background:rgba(255,255,255,0.85);border:1px solid var(--border-glow);border-radius:16px;padding:1.4rem;display:flex;gap:1.4rem;align-items:center;">
+            <div style="position:relative;width:120px;height:160px;flex-shrink:0;border-radius:10px;overflow:hidden;border:2px solid var(--accent-gold);box-shadow:0 0 20px rgba(245,158,11,0.3);cursor:pointer;" id="invite-thumb-trigger">
+              <img src="assets/images/Invitation_Pass.jpg" alt="Official Invitation Pass to SN Rao" style="width:100%;height:100%;object-fit:cover;display:block;">
+              <div style="position:absolute;inset:0;background:rgba(0,0,0,0.35);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.2s ease;" class="thumb-hover-overlay">
+                <i data-lucide="zoom-in" style="color:#fff;width:24px;height:24px;"></i>
+              </div>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:0.4rem;flex:1;">
+              <div style="display:inline-flex;align-items:center;gap:0.4rem;font-family:var(--font-mono);font-size:0.7rem;color:var(--accent-gold);text-transform:uppercase;">
+                <i data-lucide="stamp" style="width:12px;height:12px;"></i>
+                OFFICIAL INVITATION RECORD • 03 NOV 2026
+              </div>
+              <h4 style="color:#7F011F;font-size:1.05rem;font-weight:800;line-height:1.2;">Exclusive Guest Invitation Pass</h4>
+              <p style="font-size:0.8rem;color:#3B000D;line-height:1.6;font-weight:500;">Formal invitation dispatched to Suvarnanidhi Rao by Gryphon Academy Leadership for Ep 1 shoot at 9:30 AM.
+              </p>
+              <div style="display:flex;gap:0.6rem;margin-top:0.4rem;flex-wrap:wrap;">
+                <button class="ctrl-btn" id="open-invite-modal-btn" style="font-size:0.75rem;padding:0.35rem 0.8rem;">
+                  <i data-lucide="maximize-2" style="width:12px;height:12px;"></i>
+                  <span>Inspect Full Letter</span>
+                </button>
+                <a href="assets/images/Invitation_Pass.jpg" target="_blank" class="ctrl-btn" style="font-size:0.75rem;padding:0.35rem 0.8rem;text-decoration:none;">
+                  <i data-lucide="external-link" style="width:12px;height:12px;"></i>
+                  <span>Open Image</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Research Screen Recordings Vault -->
+        <div class="research-vault-card card-3d">
+          <div class="vault-tabs-nav" id="research-tabs-nav">
+            <button class="vault-tab-btn active" data-video="assets/videos/research_linkedin.mp4"
+              data-label="LinkedIn Profile Recon">
+              <i data-lucide="linkedin"></i>
+              LinkedIn Recon
+            </button>
+            <button class="vault-tab-btn" data-video="assets/videos/research_google.mp4"
+              data-label="Google Footprint Scan">
+              <i data-lucide="globe"></i>
+              Google Footprint
+            </button>
+            <button class="vault-tab-btn" data-video="assets/videos/research_philips.mp4"
+              data-label="Philips Leadership Deep Dive">
+              <i data-lucide="briefcase"></i>
+              Philips Leadership
+            </button>
+            <button class="vault-tab-btn" data-video="assets/videos/research_tascon.mp4"
+              data-label="TASCON 2026 Keynote">
+              <i data-lucide="tv"></i>
+              TASCON Keynote
+            </button>
+          </div>
+
+          <div class="vault-screen-player">
+            <video id="research-video-player" class="vault-video" autoplay loop muted playsinline>
+              <source src="assets/videos/research_linkedin.mp4" type="video/mp4">
+            </video>
+            <div class="player-overlay-hud">
+              <i data-lucide="video" style="width:14px;height:14px;"></i>
+              <span id="research-video-hud-label">RECORDING: LinkedIn Profile Recon</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= ACT 8: GUEST INTRO VIDEO ================= -->
+    <section class="chapter-section" id="act-intro-video">
+      <div class="section-header-tag">
+        <i data-lucide="film" style="width:14px;height:14px;"></i>
+        Act 08 • Motion Graphics Bumper
+      </div>
+      <h2 class="section-title">The Official Guest Intro AV</h2>
+      <p class="section-subtitle">
+        A fast-paced kinetic introduction was produced to set the tone, establish SN Rao's credentials, and prime the
+        audience for a high-intensity masterclass.
+      </p>
+
+      <div class="video-player-container card-3d" id="intro-video-container">
+        <video class="main-video-element" id="intro-video-element" playsinline preload="auto">
+          <source src="assets/videos/guest_intro_preview.mp4#t=0.5" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+
+        <!-- Custom Player UI -->
+        <div class="video-custom-controls">
+          <div class="video-progress-bar" id="video-progress-bar">
+            <div class="video-progress-fill" id="video-progress-fill"></div>
+          </div>
+
+          <div class="controls-button-row">
+            <div class="controls-left">
+              <button class="ctrl-icon-btn" id="video-play-btn" title="Play / Pause">
+                <i data-lucide="play" id="play-pause-icon"></i>
+              </button>
+              <button class="ctrl-icon-btn" id="video-mute-btn" title="Mute / Unmute">
+                <i data-lucide="volume-2" id="mute-icon"></i>
+              </button>
+              <span class="video-time-display" id="video-time-display">0:00 / 0:00</span>
+            </div>
+
+            <div class="controls-right">
+              <button class="ctrl-icon-btn" id="video-replay-btn" title="Replay">
+                <i data-lucide="rotate-ccw"></i>
+              </button>
+              <button class="ctrl-icon-btn" id="video-fs-btn" title="Fullscreen">
+                <i data-lucide="maximize"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ACT 9: POST PRODUCTION ================= -->
+    <section class="chapter-section" id="act-post-production">
+      <div class="section-header-tag">
+        <i data-lucide="scissors" style="width:14px;height:14px;"></i>
+        Act 09 • Editing Suite
+      </div>
+      <h2 class="section-title">The Post-Production Surgery</h2>
+      <p class="section-subtitle">
+        Transforming raw multi-track audio and multi-angle 4K video into a fast-paced, retention-optimized broadcast
+        experience.
+      </p>
+
+      <div class="editing-workflow-grid">
+        <div class="edit-step-card card-3d">
+          <div class="step-num-badge">01</div>
+          <h4 style="color:#7F011F !important;font-weight:800;font-size:1.1rem;">Multi-Cam Switching</h4>
+          <p style="font-size:0.88rem;color:#3B000D !important;font-weight:600;line-height:1.6;">Dynamic angle cuts every 5–8 seconds between Host wide (Cam-1) and Guest close-up (Cam-2) to prevent viewer fatigue.</p>
+        </div>
+
+        <div class="edit-step-card card-3d">
+          <div class="step-num-badge">02</div>
+          <h4 style="color:#7F011F !important;font-weight:800;font-size:1.1rem;">Audio Mastering</h4>
+          <p style="font-size:0.88rem;color:#3B000D !important;font-weight:600;line-height:1.6;">High-pass filtering, de-essing, dynamic noise-gate, and loudness normalization to strict broadcast standard (-14 LUFS).</p>
+        </div>
+
+        <div class="edit-step-card card-3d">
+          <div class="step-num-badge">03</div>
+          <h4 style="color:#7F011F !important;font-weight:800;font-size:1.1rem;">Color Grading LUTs</h4>
+          <p style="font-size:0.88rem;color:#3B000D !important;font-weight:600;line-height:1.6;">Balanced studio skin tones with punchy coral chair saturation and cool ambient stone wall rim lighting.</p>
+        </div>
+
+        <div class="edit-step-card card-3d">
+          <div class="step-num-badge">04</div>
+          <h4 style="color:#7F011F !important;font-weight:800;font-size:1.1rem;">Motion Lower Thirds</h4>
+          <p style="font-size:0.88rem;color:#3B000D !important;font-weight:600;line-height:1.6;">Animated credential overlays, question title cards, chapter markers, and branded end-screen callouts.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ACT 10: YOUTUBE LAUNCH & SEO AUDIT ================= -->
+    <section class="chapter-section" id="act-youtube-seo">
+      <div class="section-header-tag">
+        <i data-lucide="trending-up" style="width:14px;height:14px;"></i>
+        Act 10 • Distribution & SEO Suite
+      </div>
+      <h2 class="section-title">YouTube Channel Launch & SEO Optimization</h2>
+      <p class="section-subtitle">
+        We launched the official channel (<code style="color:#7F011F;font-weight:800;">@TheAccessCard_GA</code>). Here is
+        the comprehensive algorithmic strategy to maximize impressions, CTR, and watch time.
+      </p>
+
+      <div class="seo-master-stage">
+
+        <!-- Live Channel Screenshot Card -->
+        <div class="channel-proof-card card-3d">
+          <img src="assets/images/youtube_channel.png" alt="YouTube Channel Proof" class="channel-screenshot-img">
+          <div style="padding:1.5rem;background:#FAF5E8;">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <div>
+                <h4 style="color:#7F011F !important;font-weight:800;font-size:1.15rem;">The Gryphon Academy Podcast</h4>
+                <p style="font-size:0.85rem;color:#7F011F;font-family:var(--font-mono);font-weight:800;">@TheAccessCard_GA • Official Channel</p>
+              </div>
+              <a href="https://studio.youtube.com" target="_blank" class="ctrl-btn" style="font-size:0.75rem;">
+                <i data-lucide="external-link"></i>
+                Channel Page
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEO Action Suite -->
+        <div class="seo-suite-card card-3d">
+
+          <div class="seo-nav-tabs" id="seo-nav-tabs">
+            <button class="seo-tab-btn active" data-tab="titles">
+              <i data-lucide="type"></i>
+              High-CTR Titles
+            </button>
+            <button class="seo-tab-btn" data-tab="description">
+              <i data-lucide="align-left"></i>
+              SEO Description
+            </button>
+            <button class="seo-tab-btn" data-tab="tags">
+              <i data-lucide="tag"></i>
+              Algorithmic Tags
+            </button>
+            <button class="seo-tab-btn" data-tab="retention">
+              <i data-lucide="clock"></i>
+              Watch Time Hacks
+            </button>
+          </div>
+
+          <!-- Titles Tab -->
+          <div class="seo-tab-content active" id="seo-tab-titles">
+            <p style="font-size:0.92rem;color:#3B000D !important;font-weight:600;line-height:1.65;margin-bottom:1.2rem;">
+              The original trial title was <code style="color:#7F011F !important;background:#EDE0BF !important;padding:0.2rem 0.5rem;border-radius:4px;font-weight:800;border:1px solid rgba(127,1,31,0.25);">GA Podcast Ep 1 SN Rao</code>. While functional, it leaves 75% of search & browse traffic on the table. Use these A/B tested high-CTR formulas:
+            </p>
+
+            <div class="copy-box" style="background:#FAF5E8;border:1px solid rgba(127,1,31,0.25);border-radius:12px;padding:1.2rem;margin-bottom:1rem;">
+              <button class="copy-btn" onclick="copyText('title-opt-1')">Copy</button>
+              <span style="font-size:0.75rem;color:#7F011F;font-family:var(--font-mono);font-weight:800;letter-spacing:0.05em;">FORMULA A •
+                CURIOSITY & AUTHORITY (RECOMMENDED)</span>
+              <p id="title-opt-1" style="color:#3B000D;font-weight:800;margin-top:0.4rem;font-size:1rem;line-height:1.4;">
+                20 Years of Campus Hiring Secrets in 60 Minutes | Suvarnanidhi Rao (Dentsu) | The Access Card Ep 1
+              </p>
+            </div>
+
+            <div class="copy-box" style="background:#FAF5E8;border:1px solid rgba(127,1,31,0.25);border-radius:12px;padding:1.2rem;margin-bottom:1rem;">
+              <button class="copy-btn" onclick="copyText('title-opt-2')">Copy</button>
+              <span style="font-size:0.75rem;color:#890149;font-family:var(--font-mono);font-weight:800;letter-spacing:0.05em;">FORMULA B • SEARCH
+                & PAIN-POINT DRIVEN</span>
+              <p id="title-opt-2" style="color:#3B000D;font-weight:800;margin-top:0.4rem;font-size:1rem;line-height:1.4;">
+                Why 80% Freshers Get Rejected in Campus Placements (And How To Fix It) | Ep 1
+              </p>
+            </div>
+
+            <div class="copy-box" style="background:#FAF5E8;border:1px solid rgba(127,1,31,0.25);border-radius:12px;padding:1.2rem;margin-bottom:1rem;">
+              <button class="copy-btn" onclick="copyText('title-opt-3')">Copy</button>
+              <span style="font-size:0.75rem;color:#7F011F;font-family:var(--font-mono);font-weight:800;letter-spacing:0.05em;">FORMULA C •
+                PROVOCATIVE CONTRARIAN HOOK</span>
+              <p id="title-opt-3" style="color:#3B000D;font-weight:800;margin-top:0.4rem;font-size:1rem;line-height:1.4;">
+                "Is Corporate Life Really a Trap?" Top Recruiter Speaks The Unfiltered Truth
+              </p>
+            </div>
+          </div>
+
+          <!-- Description Tab -->
+          <div class="seo-tab-content" id="seo-tab-description">
+            <p style="font-size:0.85rem;color:var(--text-secondary);">
+              First 2 lines appear in Google search snippets and YouTube search previews. Optimize for high search
+              keyword density:
+            </p>
+
+            <div class="copy-box" style="max-height:220px;overflow-y:auto;">
+              <button class="copy-btn" onclick="copyText('desc-opt-copy')">Copy Full Description</button>
+              <pre id="desc-opt-copy"
+                style="font-family:var(--font-mono);font-size:0.75rem;color:#3B000D !important;font-weight:600;white-space:pre-wrap;">
+What does a corporate recruiter notice in the first 2 minutes of an interview? In Episode 1 of The Access Card by Gryphon Academy, Suvarnanidhi Rao (Associate Director - Talent Acquisition, Dentsu Global Services; ex-Philips, Wipro, TCS) breaks down 20+ years of hiring secrets for college freshers and jobseekers.
+
+Timestamps:
+00:00 - The Corporate Trap: Reality vs Myth
+04:15 - From Bachelor of Theology to 20 Years in Recruitment
+12:30 - How Campus Hiring Has Changed (Then vs Now)
+21:40 - Inside a Recruiter's Mind: What Wins an Interview
+34:10 - Global Capability Centres (GCCs): India's Hiring Boom
+45:20 - AI Impact: Will Freshers Lose Tech Jobs?
+55:00 - The Ultimate Advice for College Final Years
+
+Official Website: https://gryphonacademy.co.in
+Subscribe to The Access Card: @TheAccessCard_GA
+#CampusPlacements #FresherJobs #InterviewTips #Dentsu #CareerAdvice #TheAccessCard #GryphonAcademy
+              </pre>
+            </div>
+          </div>
+
+          <!-- Tags Tab -->
+          <div class="seo-tab-content" id="seo-tab-tags">
+            <p style="font-size:0.85rem;color:var(--text-secondary);">
+              Targeted comma-separated tags to feed the YouTube recommendation algorithm and Google indexing:
+            </p>
+
+            <div class="copy-box">
+              <button class="copy-btn" onclick="copyText('tags-copy')">Copy Tags</button>
+              <p id="tags-copy"
+                style="font-family:var(--font-mono);font-size:0.8rem;color:var(--primary-cyan);line-height:1.6;">
+                campus placement 2026, fresher hiring tips, how to crack campus interview, talent acquisition secrets,
+                suvarnanidhi rao, dentsu hiring, hr interview questions, college placement preparation, corporate job
+                switch, gcc hiring india, ai jobs for freshers, gryphon academy, the access card podcast
+              </p>
+            </div>
+          </div>
+
+          <!-- Retention Tab -->
+          <div class="seo-tab-content" id="seo-tab-retention">
+            <div style="display:flex;flex-direction:column;gap:0.8rem;">
+              <div
+                style="background:rgba(255,255,255,0.03);padding:0.8rem;border-radius:8px;border-left:3px solid var(--primary-cyan);">
+                <strong style="color:#7F011F !important;font-size:0.9rem;font-weight:800;">1. The 30-Second Hook Rule:</strong>
+                <p style="font-size:0.8rem;color:var(--text-secondary);margin-top:0.2rem;">Never start with "Hello guys
+                  welcome to my channel". Start with the most shocking soundbite: <em>"Students think corporate life is
+                    a trap... here's the reality."</em></p>
+              </div>
+
+              <div
+                style="background:rgba(255,255,255,0.03);padding:0.8rem;border-radius:8px;border-left:3px solid var(--accent-gold);">
+                <strong style="color:#7F011F !important;font-size:0.9rem;font-weight:800;">2. Pinned Comment Algorithm Loop:</strong>
+                <p style="font-size:0.8rem;color:var(--text-secondary);margin-top:0.2rem;">Pin a controversial question:
+                  <em>"Which question in job interviews scares you the most? Drop it below and SN Rao might answer
+                    it!"</em> This doubles engagement metrics.</p>
+              </div>
+
+              <div
+                style="background:rgba(255,255,255,0.03);padding:0.8rem;border-radius:8px;border-left:3px solid var(--accent-emerald);">
+                <strong style="color:#7F011F !important;font-size:0.9rem;font-weight:800;">3. YouTube Shorts Synergies:</strong>
+                <p style="font-size:0.8rem;color:var(--text-secondary);margin-top:0.2rem;">Cut 4 high-energy 45-second
+                  Shorts linking back as "Related Video" to the full episode to funnel viral short-form viewers into
+                  1-hour watch time.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= ACT 11: PREMIERE & TRIAL VIDEO ================= -->
+    <section class="chapter-section" id="act-trial-premiere">
+      <div class="section-header-tag">
+        <i data-lucide="play" style="width:14px;height:14px;"></i>
+        Act 11 • World Premiere
+      </div>
+      <h2 class="section-title">The First Video Trial Is Live!</h2>
+      <p class="section-subtitle">
+        The culmination of weeks of ideation, equipment acquisition, deep research, and production. Experience Episode 1
+        right here:
+      </p>
+
+      <div class="trial-premiere-card card-3d" style="background:#FAF5E8 !important;border:2px solid #7F011F !important;box-shadow:0 10px 30px rgba(127,1,31,0.08);border-radius:20px;padding:2rem;">
+
+        <div class="trial-embed-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/h4h5KASzdjQ?rel=0&modestbranding=1"
+            title="GA Podcast Ep 1 SN Rao | The Access Card"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;">
+          <div>
+            <h3 style="color:#7F011F !important;font-size:1.6rem;font-weight:900;">GA Podcast Ep 1: SN Rao</h3>
+            <p style="color:#890149;font-family:var(--font-mono);font-size:0.95rem;font-weight:800;">The Access Card by Gryphon Academy • Episode 01 Premiere</p>
+          </div>
+
+          <a href="https://youtu.be/h4h5KASzdjQ?si=XJJkmhFL2Zf-TL5V" target="_blank" rel="noopener"
+            class="btn-cta-watch" style="font-size:1rem;padding:0.8rem 1.8rem;">
+            <i data-lucide="external-link"></i>
+            <span>Open in YouTube App</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" style="background:#FAF5E8 !important;border-top:2px solid #7F011F !important;padding:3rem 1.5rem;text-align:center;">
+    <div style="display:flex;justify-content:center;margin-bottom:1rem;">
+      <img src="assets/images/ga_logo_dark.png" alt="Gryphon Academy" style="height:36px;opacity:0.8;">
+    </div>
+    <p style="font-weight:800;color:#7F011F !important;font-size:1.1rem;">Gryphon Academy Private Limited</p>
+    <p style="margin-top:0.3rem;color:#3B000D !important;font-weight:600;font-size:0.9rem;">9th Floor, Olympia Business House, Baner, Pune – 411045</p>
+    <div class="footer-social-links">
+      <a href="https://gryphonacademy.co.in" target="_blank" class="social-link" title="Website"><i
+          data-lucide="globe"></i></a>
+      <a href="https://www.linkedin.com/company/gryphon-academy" target="_blank" class="social-link" title="LinkedIn"><i
+          data-lucide="linkedin"></i></a>
+      <a href="https://www.youtube.com/@TheAccessCard_GA" target="_blank" class="social-link" title="YouTube"><i
+          data-lucide="youtube"></i></a>
+      <a href="https://public-zeta-ashy.vercel.app/" target="_blank" class="social-link" title="Creative Review"><i
+          data-lucide="layout"></i></a>
+    </div>
+    <p style="font-size:0.8rem;color:#890149 !important;margin-top:1rem;font-weight:600;">The Access Card Podcast © 2026. Built with high-energy 3D WebGL & Interactive Storytelling.</p>
+  </footer>
+
+  <!-- Fullscreen Invitation Pass Lightbox Modal -->
+  <div id="invite-modal-overlay" class="invite-modal-overlay" style="display:none;">
+    <div class="invite-modal-backdrop" id="invite-modal-backdrop"></div>
+    <div class="invite-modal-box">
+      <div class="invite-modal-header">
+        <div style="display:flex;align-items:center;gap:0.75rem;">
+          <i data-lucide="mail-check" style="color:var(--accent-gold);width:20px;height:20px;"></i>
+          <div>
+            <h3 style="color:#fff;font-size:1.1rem;font-weight:800;line-height:1.2;">Official VIP Invitation Pass</h3>
+            <p style="color:var(--text-secondary);font-size:0.75rem;font-family:var(--font-mono);">Gryphon Academy Pvt. Ltd. • The Access Card Ep 1</p>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.6rem;">
+          <a href="assets/images/Invitation_Pass.jpg" download="Gryphon_Academy_Invitation_Pass_SN_Rao.jpg" class="ctrl-btn" style="font-size:0.75rem;padding:0.4rem 0.8rem;text-decoration:none;">
+            <i data-lucide="download" style="width:14px;height:14px;"></i>
+            <span>Download Pass</span>
+          </a>
+          <button class="ctrl-btn" id="close-invite-modal-btn" style="padding:0.4rem 0.6rem;">
+            <i data-lucide="x" style="width:18px;height:18px;"></i>
+          </button>
+        </div>
+      </div>
+      <div class="invite-modal-body">
+        <img src="assets/images/Invitation_Pass.jpg" alt="Official VIP Invitation Pass" class="modal-invite-image">
+      </div>
+      <div class="invite-modal-footer">
+        <div style="display:flex;gap:1.5rem;flex-wrap:wrap;font-family:var(--font-mono);font-size:0.75rem;color:var(--text-secondary);">
+          <span><strong style="color:#fff;">Date:</strong> 03rd November 2026</span>
+          <span><strong style="color:#fff;">Time:</strong> 9:30 AM</span>
+          <span><strong style="color:#fff;">Venue:</strong> Gryphon Academy, Baner, Pune</span>
+          <span><strong style="color:#fff;">Signed by:</strong> Mr. Shashi Bhat & Ms. Ummeaiman Ansari</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js?v=1795695553962"></script>
+</body>
+
+</html>
