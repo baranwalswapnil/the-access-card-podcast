@@ -7,3 +7,7 @@
 /*.docx
 /*.bak*
 /*.tmp
+
+# Ignore local server files so Vercel serves pure static CDN
+server.js
+package.json
