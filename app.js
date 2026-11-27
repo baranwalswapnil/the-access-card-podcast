@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBtsVault();
   initSeoTabs();
   initScrollSpy();
+  initGuestTicker();
 });
 
 /* ==========================================================================
@@ -1009,4 +1010,26 @@ function showToast(message) {
     toast.style.transform = 'translateX(-50%) translateY(100px)';
     toast.style.opacity = '0';
   }, 3200);
+}
+
+/* ==========================================================================
+   12. GUEST TICKER PAUSE / RESUME CONTROLLER
+   ========================================================================== */
+function initGuestTicker() {
+  const tickerBtn = document.getElementById('ticker-toggle-btn');
+  const tickerTrack = document.getElementById('guest-ticker-track');
+  const tickerIcon = document.getElementById('ticker-toggle-icon');
+  const tickerText = document.getElementById('ticker-toggle-text');
+
+  if (tickerBtn && tickerTrack) {
+    tickerBtn.addEventListener('click', () => {
+      tickerTrack.classList.toggle('paused');
+      const isPaused = tickerTrack.classList.contains('paused');
+      if (tickerText) tickerText.textContent = isPaused ? 'Resume Scroll' : 'Pause Scroll';
+      if (tickerIcon) {
+        tickerIcon.setAttribute('data-lucide', isPaused ? 'play' : 'pause');
+        if (window.lucide) window.lucide.createIcons();
+      }
+    });
+  }
 }
