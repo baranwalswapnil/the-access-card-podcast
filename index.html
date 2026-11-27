@@ -4836,34 +4836,40 @@ Subscribe to The Access Card: @TheAccessCard_GA
     </div>
   </div>
 
-  <!-- Thank You End-of-Slide Popup Modal -->
-  <div id="thankyou-modal-overlay" class="thankyou-modal-overlay" style="display:none;">
+  <!-- Fullscreen Thank You End-of-Slide Modal Takeover -->
+  <div id="thankyou-modal-overlay" class="thankyou-modal-overlay fullscreen-takeover" style="display:none;">
     <div class="thankyou-modal-backdrop" id="thankyou-modal-backdrop"></div>
-    <div class="thankyou-modal-box">
-      <div class="thankyou-modal-header">
+    <div class="thankyou-modal-box fullscreen-box">
+      <div class="thankyou-modal-header fullscreen-header">
         <div style="display:flex;align-items:center;gap:0.75rem;">
           <div class="thankyou-icon-circle">
             <i data-lucide="sparkles" style="width:18px;height:18px;"></i>
           </div>
           <div>
-            <h3 style="color:#7F011F;font-size:1.15rem;font-weight:900;line-height:1.2;">The Access Card Podcast</h3>
-            <p style="color:#890149;font-size:0.78rem;font-family:var(--font-mono);font-weight:700;">Gryphon Academy • Thank You For Watching</p>
+            <h3 style="color:#FAF5E8;font-size:1.15rem;font-weight:900;line-height:1.2;">The Access Card Podcast</h3>
+            <p style="color:#F5EBD0;opacity:0.85;font-size:0.78rem;font-family:var(--font-mono);font-weight:700;">Gryphon Academy • Official First Broadcast</p>
           </div>
         </div>
-        <button class="ctrl-btn" id="close-thankyou-modal-btn" title="Close" style="padding:0.4rem 0.65rem;border-radius:8px;background:#EDE0BF;border:1.5px solid #7F011F;color:#7F011F;cursor:pointer;">
-          <i data-lucide="x" style="width:18px;height:18px;"></i>
-        </button>
+        <div style="display:flex;align-items:center;gap:0.8rem;">
+          <span style="font-family:var(--font-mono);font-size:0.75rem;color:#F5EBD0;opacity:0.7;" class="esc-hint">Press ESC to exit</span>
+          <button class="ctrl-btn fullscreen-close-btn" id="close-thankyou-modal-btn" title="Close Fullscreen (Esc)">
+            <i data-lucide="x" style="width:20px;height:20px;"></i>
+            <span>Close</span>
+          </button>
+        </div>
       </div>
-      <div class="thankyou-modal-body">
-        <img src="assets/images/thank_you.jpg" alt="Thank You - The Access Card Podcast" class="modal-thankyou-image">
+
+      <div class="thankyou-modal-body fullscreen-body">
+        <img src="assets/images/thank_you.jpg" alt="Thank You - The Access Card Podcast" class="modal-thankyou-image fullscreen-image">
       </div>
-      <div class="thankyou-modal-footer">
+
+      <div class="thankyou-modal-footer fullscreen-footer">
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;width:100%;">
-          <span style="font-family:var(--font-mono);font-size:0.8rem;color:#3B000D;font-weight:700;">
+          <span style="font-family:var(--font-mono);font-size:0.88rem;color:#F5EBD0;font-weight:700;">
             ❤️ Stay tuned for Episode 02 & upcoming masterclasses!
           </span>
-          <div style="display:flex;gap:0.6rem;">
-            <a href="https://www.youtube.com/@TheAccessCard_GA" target="_blank" rel="noopener" class="btn-cta-watch" style="font-size:0.82rem;padding:0.5rem 1.1rem;text-decoration:none;">
+          <div style="display:flex;gap:0.8rem;align-items:center;">
+            <a href="https://www.youtube.com/@TheAccessCard_GA" target="_blank" rel="noopener" class="btn-cta-watch" style="font-size:0.9rem;padding:0.6rem 1.4rem;text-decoration:none;">
               <i data-lucide="youtube"></i>
               <span>Subscribe on YouTube</span>
             </a>
