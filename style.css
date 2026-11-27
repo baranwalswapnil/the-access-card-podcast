@@ -2590,3 +2590,34 @@ body {
     justify-content: flex-start;
   }
 }
+
+/* 3. Target 03: Change The Set-Up Card */
+.target-setup-card {
+  background: #FAF5E8 !important;
+  border: 2px solid #7F011F !important;
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin-top: 2.5rem;
+  box-shadow: 0 10px 30px rgba(127, 1, 31, 0.08);
+}
+
+.target-setup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.setup-target-badge {
+  background: #7F011F !important;
+  color: #F5EBD0 !important;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+}
