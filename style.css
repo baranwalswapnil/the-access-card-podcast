@@ -2621,3 +2621,31 @@ body {
   padding: 0.4rem 0.9rem;
   border-radius: 20px;
 }
+
+.btn-detailed-pdf {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #7F011F !important;
+  color: #F5EBD0 !important;
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding: 0.45rem 1.1rem;
+  border-radius: 10px;
+  border: 1.5px solid #7F011F;
+  box-shadow: 0 4px 14px rgba(127, 1, 31, 0.25);
+  transition: all 0.25s ease;
+}
+
+.btn-detailed-pdf i {
+  color: #F5EBD0 !important;
+}
+
+.btn-detailed-pdf:hover {
+  background: #890149 !important;
+  border-color: #890149 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(137, 1, 73, 0.35);
+}
