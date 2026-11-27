@@ -22,7 +22,7 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <link rel="stylesheet" href="style.css?v=1795695690000">
+  <link rel="stylesheet" href="style.css?v=20261127_fs_takeover">
 </head>
 
 <body>
@@ -4840,32 +4840,41 @@ Subscribe to The Access Card: @TheAccessCard_GA
   <div id="thankyou-modal-overlay" class="thankyou-modal-overlay fullscreen-takeover" style="display:none;">
     <div class="thankyou-modal-backdrop" id="thankyou-modal-backdrop"></div>
     <div class="thankyou-modal-box fullscreen-box">
+      <!-- Ambient Blurred Backdrop -->
+      <div class="thankyou-ambient-bg" style="background-image: url('assets/images/thank_you.jpg');"></div>
+
+      <!-- Floating Header Overlay -->
       <div class="thankyou-modal-header fullscreen-header">
-        <div style="display:flex;align-items:center;gap:0.75rem;">
+        <div class="fullscreen-header-left">
           <div class="thankyou-icon-circle">
             <i data-lucide="sparkles" style="width:18px;height:18px;"></i>
           </div>
           <div>
-            <h3 style="color:#FAF5E8;font-size:1.15rem;font-weight:900;line-height:1.2;">The Access Card Podcast</h3>
-            <p style="color:#F5EBD0;opacity:0.85;font-size:0.78rem;font-family:var(--font-mono);font-weight:700;">Gryphon Academy • Official First Broadcast</p>
+            <h3 style="color:#FAF5E8;font-size:1.15rem;font-weight:900;line-height:1.2;margin:0;">The Access Card Podcast</h3>
+            <p style="color:#F5EBD0;opacity:0.85;font-size:0.75rem;font-family:var(--font-mono);font-weight:700;margin:0;">Gryphon Academy • Official First Broadcast</p>
           </div>
         </div>
-        <div style="display:flex;align-items:center;gap:0.8rem;">
-          <span style="font-family:var(--font-mono);font-size:0.75rem;color:#F5EBD0;opacity:0.7;" class="esc-hint">Press ESC to exit</span>
-          <button class="ctrl-btn fullscreen-close-btn" id="close-thankyou-modal-btn" title="Close Fullscreen (Esc)">
-            <i data-lucide="x" style="width:20px;height:20px;"></i>
+        <div class="fullscreen-header-right">
+          <button class="ctrl-btn fullscreen-action-btn" id="toggle-browser-fs-btn" title="Toggle Native Browser Fullscreen (F11)">
+            <i data-lucide="maximize" id="fs-toggle-icon" style="width:16px;height:16px;"></i>
+            <span id="fs-toggle-label">Fullscreen</span>
+          </button>
+          <button class="ctrl-btn fullscreen-close-btn" id="close-thankyou-modal-btn" title="Close (Esc)">
+            <i data-lucide="x" style="width:18px;height:18px;"></i>
             <span>Close</span>
           </button>
         </div>
       </div>
 
+      <!-- Fullscreen Image Center -->
       <div class="thankyou-modal-body fullscreen-body">
         <img src="assets/images/thank_you.jpg" alt="Thank You - The Access Card Podcast" class="modal-thankyou-image fullscreen-image">
       </div>
 
+      <!-- Floating Footer Overlay -->
       <div class="thankyou-modal-footer fullscreen-footer">
-        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;width:100%;">
-          <span style="font-family:var(--font-mono);font-size:0.88rem;color:#F5EBD0;font-weight:700;">
+        <div class="fullscreen-footer-content">
+          <span class="fullscreen-footer-text">
             ❤️ Stay tuned for Episode 02 & upcoming masterclasses!
           </span>
           <div style="display:flex;gap:0.8rem;align-items:center;">
@@ -4879,7 +4888,7 @@ Subscribe to The Access Card: @TheAccessCard_GA
     </div>
   </div>
 
-  <script src="app.js?v=1795695553962"></script>
+  <script src="app.js?v=20261127_fs_takeover"></script>
 </body>
 
 </html>

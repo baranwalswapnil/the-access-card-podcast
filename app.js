@@ -1036,12 +1036,14 @@ function initGuestTicker() {
 }
 
 /* ==========================================================================
-   13. END-OF-SLIDE THANK YOU POPUP
+   13. END-OF-SLIDE THANK YOU POPUP (FULLSCREEN TAKEOVER)
    ========================================================================== */
 function initThankYouPopup() {
   const modal = document.getElementById('thankyou-modal-overlay');
   const closeBtn = document.getElementById('close-thankyou-modal-btn');
   const backdrop = document.getElementById('thankyou-modal-backdrop');
+  const fsBtn = document.getElementById('toggle-browser-fs-btn');
+  const fsLabel = document.getElementById('fs-toggle-label');
   let hasTriggered = false;
 
   function openThankYouModal() {
@@ -1055,7 +1057,43 @@ function initThankYouPopup() {
     if (!modal) return;
     modal.style.display = 'none';
     document.body.style.overflow = '';
+    if (document.fullscreenElement && document.exitFullscreen) {
+      document.exitFullscreen().catch(() => {});
+    }
   }
+
+  // Native Fullscreen toggle handler
+  function toggleNativeFullscreen() {
+    if (!document.fullscreenElement) {
+      const el = modal || document.documentElement;
+      if (el.requestFullscreen) {
+        el.requestFullscreen().then(() => {
+          if (fsLabel) fsLabel.textContent = 'Exit Fullscreen';
+        }).catch(err => console.log('Fullscreen request:', err));
+      } else if (el.webkitRequestFullscreen) {
+        el.webkitRequestFullscreen();
+      }
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen().then(() => {
+          if (fsLabel) fsLabel.textContent = 'Fullscreen';
+        }).catch(() => {});
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      }
+    }
+  }
+
+  if (fsBtn) {
+    fsBtn.addEventListener('click', toggleNativeFullscreen);
+  }
+
+  document.addEventListener('fullscreenchange', () => {
+    if (fsLabel) {
+      fsLabel.textContent = document.fullscreenElement ? 'Exit Fullscreen' : 'Fullscreen';
+    }
+    if (window.lucide) window.lucide.createIcons();
+  });
 
   if (closeBtn) closeBtn.addEventListener('click', closeThankYouModal);
   if (backdrop) backdrop.addEventListener('click', closeThankYouModal);
