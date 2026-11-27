@@ -4792,6 +4792,12 @@ Subscribe to The Access Card: @TheAccessCard_GA
           data-lucide="layout"></i></a>
     </div>
     <p style="font-size:0.8rem;color:#890149 !important;margin-top:1rem;font-weight:600;">The Access Card Podcast © 2026.</p>
+    <div style="margin-top:0.8rem;">
+      <button id="reopen-thankyou-btn" class="ctrl-btn" style="padding:0.45rem 1rem;font-size:0.82rem;font-weight:700;background:#EDE0BF;border:1.5px solid #7F011F;color:#7F011F;border-radius:10px;cursor:pointer;display:inline-flex;align-items:center;gap:0.4rem;">
+        <i data-lucide="heart" style="width:14px;height:14px;color:#7F011F;"></i>
+        <span>Thank You Card</span>
+      </button>
+    </div>
   </footer>
 
   <!-- Fullscreen Invitation Pass Lightbox Modal -->
@@ -4825,6 +4831,43 @@ Subscribe to The Access Card: @TheAccessCard_GA
           <span><strong style="color:#fff;">Time:</strong> 9:30 AM</span>
           <span><strong style="color:#fff;">Venue:</strong> Gryphon Academy, Baner, Pune</span>
           <span><strong style="color:#fff;">Signed by:</strong> Mr. Shashi Bhat & Ms. Ummeaiman Ansari</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Thank You End-of-Slide Popup Modal -->
+  <div id="thankyou-modal-overlay" class="thankyou-modal-overlay" style="display:none;">
+    <div class="thankyou-modal-backdrop" id="thankyou-modal-backdrop"></div>
+    <div class="thankyou-modal-box">
+      <div class="thankyou-modal-header">
+        <div style="display:flex;align-items:center;gap:0.75rem;">
+          <div class="thankyou-icon-circle">
+            <i data-lucide="sparkles" style="width:18px;height:18px;"></i>
+          </div>
+          <div>
+            <h3 style="color:#7F011F;font-size:1.15rem;font-weight:900;line-height:1.2;">The Access Card Podcast</h3>
+            <p style="color:#890149;font-size:0.78rem;font-family:var(--font-mono);font-weight:700;">Gryphon Academy • Thank You For Watching</p>
+          </div>
+        </div>
+        <button class="ctrl-btn" id="close-thankyou-modal-btn" title="Close" style="padding:0.4rem 0.65rem;border-radius:8px;background:#EDE0BF;border:1.5px solid #7F011F;color:#7F011F;cursor:pointer;">
+          <i data-lucide="x" style="width:18px;height:18px;"></i>
+        </button>
+      </div>
+      <div class="thankyou-modal-body">
+        <img src="assets/images/thank_you.jpg" alt="Thank You - The Access Card Podcast" class="modal-thankyou-image">
+      </div>
+      <div class="thankyou-modal-footer">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;width:100%;">
+          <span style="font-family:var(--font-mono);font-size:0.8rem;color:#3B000D;font-weight:700;">
+            ❤️ Stay tuned for Episode 02 & upcoming masterclasses!
+          </span>
+          <div style="display:flex;gap:0.6rem;">
+            <a href="https://www.youtube.com/@TheAccessCard_GA" target="_blank" rel="noopener" class="btn-cta-watch" style="font-size:0.82rem;padding:0.5rem 1.1rem;text-decoration:none;">
+              <i data-lucide="youtube"></i>
+              <span>Subscribe on YouTube</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>

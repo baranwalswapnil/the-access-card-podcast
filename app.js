@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSeoTabs();
   initScrollSpy();
   initGuestTicker();
+  initThankYouPopup();
 });
 
 /* ==========================================================================
@@ -1030,6 +1031,60 @@ function initGuestTicker() {
         tickerIcon.setAttribute('data-lucide', isPaused ? 'play' : 'pause');
         if (window.lucide) window.lucide.createIcons();
       }
+    });
+  }
+}
+
+/* ==========================================================================
+   13. END-OF-SLIDE THANK YOU POPUP
+   ========================================================================== */
+function initThankYouPopup() {
+  const modal = document.getElementById('thankyou-modal-overlay');
+  const closeBtn = document.getElementById('close-thankyou-modal-btn');
+  const backdrop = document.getElementById('thankyou-modal-backdrop');
+  let hasTriggered = false;
+
+  function openThankYouModal() {
+    if (!modal) return;
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    if (window.lucide) window.lucide.createIcons();
+  }
+
+  function closeThankYouModal() {
+    if (!modal) return;
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  if (closeBtn) closeBtn.addEventListener('click', closeThankYouModal);
+  if (backdrop) backdrop.addEventListener('click', closeThankYouModal);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal && modal.style.display !== 'none') {
+      closeThankYouModal();
+    }
+  });
+
+  // Trigger when slide ends (user scrolls near bottom of page)
+  window.addEventListener('scroll', () => {
+    if (hasTriggered) return;
+    const scrollBottom = window.innerHeight + window.scrollY;
+    const threshold = document.documentElement.scrollHeight - 250;
+    if (scrollBottom >= threshold) {
+      hasTriggered = true;
+      setTimeout(() => {
+        openThankYouModal();
+      }, 350);
+    }
+  });
+
+  // Reopen from footer button
+  const reopenBtn = document.getElementById('reopen-thankyou-btn');
+  if (reopenBtn) {
+    reopenBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openThankYouModal();
     });
   }
 }
