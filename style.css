@@ -2112,3 +2112,408 @@ body {
 .feature-icon-box i {
   color: #7F011F !important;
 }
+
+/* ==========================================================================
+   ACT 12: UPCOMING TARGET & EXPANSION STYLES
+   ========================================================================== */
+.target-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.target-kpi-card {
+  background: #FAF5E8 !important;
+  border: 2px solid #7F011F !important;
+  border-radius: 18px;
+  padding: 1.8rem;
+  box-shadow: 0 10px 30px rgba(127, 1, 31, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.target-kpi-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(127, 1, 31, 0.14);
+}
+
+.target-kpi-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.target-icon-bubble {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: #EDE0BF !important;
+  border: 1.5px solid #7F011F !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7F011F !important;
+}
+
+.target-icon-bubble i {
+  color: #7F011F !important;
+  width: 22px;
+  height: 22px;
+}
+
+.target-status-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+}
+
+.target-status-badge.in-progress {
+  background: #7F011F !important;
+  color: #F5EBD0 !important;
+  border: 1px solid #7F011F;
+}
+
+.target-status-badge.upcoming {
+  background: #EDE0BF !important;
+  color: #7F011F !important;
+  border: 1.5px solid #7F011F;
+}
+
+.target-number {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #7F011F !important;
+  font-family: var(--font-display);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.3rem;
+}
+
+.target-label {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #7F011F !important;
+  line-height: 1.3;
+  margin-bottom: 0.6rem;
+}
+
+.target-desc {
+  font-size: 0.88rem;
+  color: #3B000D !important;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.target-progress-wrapper {
+  margin-top: auto;
+}
+
+.target-progress-bar {
+  height: 8px;
+  background: #EDE0BF;
+  border: 1px solid rgba(127, 1, 31, 0.25);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.target-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #7F011F, #890149);
+  border-radius: 6px;
+}
+
+.target-progress-meta {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #890149 !important;
+}
+
+/* 2. Pipeline Container & Cards */
+.target-pipeline-container {
+  background: #FAF5E8 !important;
+  border: 2px solid #7F011F !important;
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin-top: 2.5rem;
+  box-shadow: 0 10px 30px rgba(127, 1, 31, 0.08);
+}
+
+.pipeline-heading {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #7F011F !important;
+  line-height: 1.25;
+}
+
+.pipeline-subheading {
+  font-size: 0.95rem;
+  color: #3B000D !important;
+  font-weight: 600;
+  margin-top: 0.3rem;
+}
+
+.upcoming-episodes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.8rem;
+}
+
+.upcoming-ep-card {
+  background: #F5EBD0 !important;
+  border: 1.5px solid rgba(127, 1, 31, 0.3) !important;
+  border-radius: 14px;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.upcoming-ep-card:hover {
+  border-color: #7F011F !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(127, 1, 31, 0.1);
+}
+
+.ep-num-pill {
+  align-self: flex-start;
+  background: #7F011F !important;
+  color: #F5EBD0 !important;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+}
+
+.ep-topic-title {
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: #7F011F !important;
+  line-height: 1.35;
+  margin-bottom: 0.5rem;
+}
+
+.ep-guest-role {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #890149 !important;
+  margin-bottom: 0.8rem;
+}
+
+.ep-guest-role i {
+  color: #890149 !important;
+}
+
+.ep-desc {
+  font-size: 0.88rem;
+  color: #3B000D !important;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  flex-grow: 1;
+}
+
+.ep-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+}
+
+.ep-tag {
+  background: #EDE0BF !important;
+  color: #7F011F !important;
+  border: 1px solid rgba(127, 1, 31, 0.25);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+}
+
+/* 3. Roadmap Timeline Container & Cards */
+.target-roadmap-container {
+  background: #FAF5E8 !important;
+  border: 2px solid #7F011F !important;
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin-top: 2.5rem;
+  box-shadow: 0 10px 30px rgba(127, 1, 31, 0.08);
+}
+
+.roadmap-heading {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #7F011F !important;
+  line-height: 1.25;
+}
+
+.roadmap-subheading {
+  font-size: 0.95rem;
+  color: #3B000D !important;
+  font-weight: 600;
+  margin-top: 0.3rem;
+}
+
+.roadmap-phases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.8rem;
+}
+
+.roadmap-phase-card {
+  background: #F5EBD0 !important;
+  border: 1.5px solid rgba(127, 1, 31, 0.25) !important;
+  border-radius: 14px;
+  padding: 1.5rem;
+  position: relative;
+  transition: transform 0.25s ease;
+}
+
+.roadmap-phase-card.completed {
+  border-color: #7F011F !important;
+  border-left: 5px solid #7F011F !important;
+}
+
+.roadmap-phase-card.active {
+  border-color: #890149 !important;
+  border-left: 5px solid #890149 !important;
+  box-shadow: 0 6px 20px rgba(137, 1, 73, 0.12);
+}
+
+.roadmap-phase-card:hover {
+  transform: translateY(-3px);
+}
+
+.phase-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #7F011F !important;
+  background: #EDE0BF;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+}
+
+.phase-badge i {
+  color: #7F011F !important;
+}
+
+.phase-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #7F011F !important;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.phase-checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.phase-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #3B000D !important;
+  line-height: 1.45;
+}
+
+.phase-checklist li i {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+/* 4. Collaborate / Nominate CTA */
+.target-cta-card {
+  background: linear-gradient(135deg, #FAF5E8 0%, #EDE0BF 100%) !important;
+  border: 2px solid #7F011F !important;
+  border-radius: 20px;
+  padding: 2.2rem 2.8rem;
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.8rem;
+  box-shadow: 0 10px 30px rgba(127, 1, 31, 0.08);
+}
+
+.target-cta-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 680px;
+}
+
+.target-cta-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: #7F011F !important;
+  color: #F5EBD0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.target-cta-icon i {
+  color: #F5EBD0 !important;
+  width: 26px;
+  height: 26px;
+}
+
+.target-cta-title {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #7F011F !important;
+  line-height: 1.25;
+}
+
+.target-cta-text {
+  font-size: 0.92rem;
+  color: #3B000D !important;
+  font-weight: 600;
+  line-height: 1.55;
+  margin-top: 0.35rem;
+}
+
+.target-cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}

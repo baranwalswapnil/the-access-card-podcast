@@ -955,7 +955,8 @@ function initScrollSpy() {
     'act-intro-video': 'Act 8: Guest Intro AV',
     'act-post-production': 'Act 9: Editing Suite',
     'act-youtube-seo': 'Act 10: Channel & SEO',
-    'act-trial-premiere': 'Act 11: The Premiere'
+    'act-trial-premiere': 'Act 11: The Premiere',
+    'act-upcoming-targets': 'Act 12: Upcoming Target'
   };
 
   window.addEventListener('scroll', () => {
