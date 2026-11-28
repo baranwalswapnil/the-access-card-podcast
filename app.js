@@ -729,20 +729,20 @@ function initScriptVault() {
 }
 
 /* ==========================================================================
-   8. ACT 6: CUSTOM VIDEO PLAYER FOR GUEST INTRO
+   8. CUSTOM VIDEO PLAYERS (GUEST INTRO AV & LAUNCH VIDEO)
    ========================================================================== */
-function initVideoPlayer() {
-  const video = document.getElementById('intro-video-element');
-  const playBtn = document.getElementById('video-play-btn');
-  const playIcon = document.getElementById('play-pause-icon');
-  const muteBtn = document.getElementById('video-mute-btn');
-  const muteIcon = document.getElementById('mute-icon');
-  const progressBar = document.getElementById('video-progress-bar');
-  const progressFill = document.getElementById('video-progress-fill');
-  const timeDisplay = document.getElementById('video-time-display');
-  const replayBtn = document.getElementById('video-replay-btn');
-  const fsBtn = document.getElementById('video-fs-btn');
-  const container = document.getElementById('intro-video-container');
+function setupSinglePlayer(cfg) {
+  const video = document.getElementById(cfg.videoId);
+  const playBtn = document.getElementById(cfg.playBtnId);
+  const playIcon = document.getElementById(cfg.playIconId);
+  const muteBtn = document.getElementById(cfg.muteBtnId);
+  const muteIcon = document.getElementById(cfg.muteIconId);
+  const progressBar = document.getElementById(cfg.progressBarId);
+  const progressFill = document.getElementById(cfg.progressFillId);
+  const timeDisplay = document.getElementById(cfg.timeDisplayId);
+  const replayBtn = document.getElementById(cfg.replayBtnId);
+  const fsBtn = document.getElementById(cfg.fsBtnId);
+  const container = document.getElementById(cfg.containerId);
 
   if (!video) return;
 
@@ -841,6 +841,38 @@ function initVideoPlayer() {
       }
     });
   }
+}
+
+function initVideoPlayer() {
+  // 1. Act 08 Guest Intro AV
+  setupSinglePlayer({
+    videoId: 'intro-video-element',
+    containerId: 'intro-video-container',
+    playBtnId: 'video-play-btn',
+    playIconId: 'play-pause-icon',
+    muteBtnId: 'video-mute-btn',
+    muteIconId: 'mute-icon',
+    progressBarId: 'video-progress-bar',
+    progressFillId: 'video-progress-fill',
+    timeDisplayId: 'video-time-display',
+    replayBtnId: 'video-replay-btn',
+    fsBtnId: 'video-fs-btn'
+  });
+
+  // 2. Launch Video
+  setupSinglePlayer({
+    videoId: 'launch-video-element',
+    containerId: 'launch-video-container',
+    playBtnId: 'launch-play-btn',
+    playIconId: 'launch-play-icon',
+    muteBtnId: 'launch-mute-btn',
+    muteIconId: 'launch-mute-icon',
+    progressBarId: 'launch-progress-bar',
+    progressFillId: 'launch-progress-fill',
+    timeDisplayId: 'launch-time-display',
+    replayBtnId: 'launch-replay-btn',
+    fsBtnId: 'launch-fs-btn'
+  });
 }
 
 /* ==========================================================================
@@ -955,6 +987,7 @@ function initScrollSpy() {
     'act-shoot-day': 'Act 6: Shoot Day & BTS',
     'act-guest-intel': 'Act 7: Guest Research',
     'act-intro-video': 'Act 8: Guest Intro AV',
+    'act-launch-video': 'Launch Video',
     'act-post-production': 'Act 9: Editing Suite',
     'act-youtube-seo': 'Act 10: Channel & SEO',
     'act-trial-premiere': 'Act 11: The Premiere',

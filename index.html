@@ -22,7 +22,7 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <link rel="stylesheet" href="style.css?v=20261128_video_update">
+  <link rel="stylesheet" href="style.css?v=20261128_launch_video">
 </head>
 
 <body>
@@ -839,7 +839,6 @@
 
       <div class="video-player-container card-3d" id="intro-video-container">
         <video class="main-video-element" id="intro-video-element" playsinline preload="auto">
-          <source src="assets/videos/podcast_launch_video_1.mp4#t=0.5" type="video/mp4">
           <source src="assets/videos/guest_intro_preview.mp4#t=0.5" type="video/mp4">
           Your browser does not support HTML5 video.
         </video>
@@ -866,6 +865,53 @@
                 <i data-lucide="rotate-ccw"></i>
               </button>
               <button class="ctrl-icon-btn" id="video-fs-btn" title="Fullscreen">
+                <i data-lucide="maximize"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LAUNCH VIDEO SECTION ================= -->
+    <section class="chapter-section" id="act-launch-video">
+      <div class="section-header-tag">
+        <i data-lucide="rocket" style="width:14px;height:14px;"></i>
+        Official Launch • Premiere Broadcast
+      </div>
+      <h2 class="section-title">Launch Video</h2>
+      <p class="section-subtitle">
+        The official high-octane launch video announcing The Access Card Podcast premiere across platforms.
+      </p>
+
+      <div class="video-player-container card-3d" id="launch-video-container">
+        <video class="main-video-element" id="launch-video-element" playsinline preload="auto">
+          <source src="assets/videos/podcast_launch_video_1.mp4#t=0.5" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+
+        <!-- Custom Player UI -->
+        <div class="video-custom-controls">
+          <div class="video-progress-bar" id="launch-progress-bar">
+            <div class="video-progress-fill" id="launch-progress-fill"></div>
+          </div>
+
+          <div class="controls-button-row">
+            <div class="controls-left">
+              <button class="ctrl-icon-btn" id="launch-play-btn" title="Play / Pause">
+                <i data-lucide="play" id="launch-play-icon"></i>
+              </button>
+              <button class="ctrl-icon-btn" id="launch-mute-btn" title="Mute / Unmute">
+                <i data-lucide="volume-2" id="launch-mute-icon"></i>
+              </button>
+              <span class="video-time-display" id="launch-time-display">0:00 / 0:00</span>
+            </div>
+
+            <div class="controls-right">
+              <button class="ctrl-icon-btn" id="launch-replay-btn" title="Replay">
+                <i data-lucide="rotate-ccw"></i>
+              </button>
+              <button class="ctrl-icon-btn" id="launch-fs-btn" title="Fullscreen">
                 <i data-lucide="maximize"></i>
               </button>
             </div>
@@ -5178,7 +5224,7 @@ Subscribe to The Access Card: @TheAccessCard_GA
     </div>
   </div>
 
-  <script src="app.js?v=20261128_video_update"></script>
+  <script src="app.js?v=20261128_launch_video"></script>
 </body>
 
 </html>
